@@ -1802,9 +1802,9 @@ namespace ts {
                     return line;
                 }
 
-                // Stop searching if the line is not empty and not a comment
+                // Stop searching if the line is not empty
                 const lineText = file.text.slice(lineStarts[line], lineStarts[line + 1]).trim();
-                if (lineText !== "" && !/^(\s*)\/\/(.*)$/.test(lineText)) {
+                if (lineText !== "") {
                     return -1;
                 }
 
